@@ -60,8 +60,6 @@ img {
 /* Header */
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
     border-bottom: 1px solid #E7E9FC;
     background-color: #ffffff;
 }
@@ -70,13 +68,14 @@ img {
     display: flex;
 }
 
+
+
 .header-navigation {
     display: flex;
     align-items: center;
 }
 
 .header-logo {
-    display: flex;
     color: #4D5AE5;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -84,6 +83,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-right: 76px;
 }
 
 .header-logo .accent {
@@ -93,10 +93,13 @@ img {
 .header-navigation-list {
     display: flex;
     gap: 40px;
-    margin-right: 332px;
+    /* margin-right: 332px; */
 }
 
-.header-navigation-item {}
+.header-navigation-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
 
 .header-navigation-link {
     color: #2E2F42;
@@ -122,10 +125,13 @@ img {
 .header-address-list {
     display: flex;
     gap: 40px;
-    margin-left: auto;
+    /* margin-right: 0;; */
 }
 
-.header-address-item {}
+.header-address-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
 
 .header-address-link {
     color: #434455;
@@ -142,12 +148,10 @@ img {
 /* Hero */
 
 .hero {
+    display: flex;
     background-color: #2E2F42;
-}
-
-.hero-container  {
-    align-items: center;
-    padding: 188px 472px 188px 472px;
+    padding: 188px 0;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -157,11 +161,13 @@ img {
     line-height: 1.07;
     letter-spacing: 0.02em;
     margin-bottom: 48px;
-    width: 496px;
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .hero-button {
-    display: inline-flex;
+    display: block;
     padding: 16px 32px;
     align-items: flex-start;
     gap: 10px;
@@ -175,6 +181,8 @@ img {
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border: none;
+    min-width: 169px;
+    margin: 0 auto;
 }
 
 .hero-button:hover,
@@ -222,6 +230,7 @@ img {
 .team {
     background-color: #F4F4FD;
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .team-title {
@@ -242,13 +251,16 @@ img {
 .team-item {
     width: calc((100% - 24px * 3) / 4);
     background-color: #ffffff;
-    margin-bottom: 120px;
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 
 .team-item-img {}
+
+.unit {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 
 .team-item-title {
     color: #2E2F42;
@@ -257,7 +269,6 @@ img {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -267,7 +278,6 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 32px;
 }
 
 /* Portfolio */
@@ -275,6 +285,7 @@ img {
 .portfolio {
     background-color: #ffffff;
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .portfolio-title {
@@ -290,17 +301,22 @@ img {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
 .portfolio-item {
-    width: calc((100% - 24px * 3) / 4);
-    margin-bottom: 48px;
-    border: 1px solid #E7E9FC;
+    width: calc((100% - 24px * 2) / 3);
     background-color: #FFF;
 }
 
 .portfolio-item-img {}
+
+.app {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
 
 .portfolio-item-title {
     color: #2E2F42;
@@ -308,7 +324,6 @@ img {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -317,20 +332,18 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 16px;
 }
 
 /* Footer */
 
 .footer {
     background-color: #2E2F42;
-}
-
-.footer-container {
-    padding: 100px 1020px 100px 156px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-logo {
+    display: inline-block;
     color: #4D5AE5;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -338,6 +351,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 .footer-logo .accent {
@@ -349,6 +363,5 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    width: 264px;
-    padding-top: 18px;
+    max-width: 264px;
 }
